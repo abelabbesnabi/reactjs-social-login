@@ -5,7 +5,7 @@
  * LoginSocialTwitter
  *
  */
-import { PASS_CORS_KEY } from 'helper/constants';
+import { PASS_CORS_KEY } from '../helper/constants';
 import React, { memo, useCallback, useEffect } from 'react';
 import { IResolveParams, objectType } from '..';
 
@@ -131,7 +131,9 @@ export const LoginSocialTwitter = ({
   const onLogin = useCallback(async () => {
     onLoginStart && onLoginStart();
     window.addEventListener('storage', onChangeLocalStorage, false);
-    const oauthUrl = `${TWITTER_URL}/i/oauth2/authorize?response_type=code&client_id=${client_id}&redirect_uri=${redirect_uri}&scope=${scope}&state=${state+'_twitter'}&code_challenge=challenge&code_challenge_method=plain`;
+    const oauthUrl = `${TWITTER_URL}/i/oauth2/authorize?response_type=code&client_id=${client_id}&redirect_uri=${redirect_uri}&scope=${scope}&state=${
+      state + '_twitter'
+    }&code_challenge=challenge&code_challenge_method=plain`;
     const width = 450;
     const height = 730;
     const left = window.screen.width / 2 - width / 2;

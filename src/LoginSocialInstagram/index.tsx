@@ -4,7 +4,7 @@
  * LoginSocialInstagram
  *
  */
-import { PASS_CORS_KEY } from 'helper/constants';
+import { PASS_CORS_KEY } from '../helper/constants';
 import React, { memo, useCallback, useEffect } from 'react';
 import { objectType, IResolveParams } from '../';
 
